@@ -51,8 +51,9 @@ module "alb" {
   subnets = module.blog_vpc.public_subnets
 
   # Security Group
-  security_group_ingress_rules = module.blog_sg.security_group_id.security_group_ingress_rules
-  security_group_egress_rules  = module.blog_sg.security_group_id.security_group_engress_rules
+  # security_group_ingress_rules = module.blog_sg.security_group_id.security_group_ingress_rules
+  # security_group_egress_rules  = module.blog_sg.security_group_id.security_group_engress_rules
+  security_groups = [module.blog_sg.security_group_id]
 
   access_logs = {
     bucket = "my-alb-logs"

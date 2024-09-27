@@ -21,7 +21,7 @@ variable "environment" {
   description = "Development Environment"
   type = object({
     name           = string
-    network_prefex = string
+    network_prefix = string
   })
 
   default = {

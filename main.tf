@@ -46,12 +46,8 @@ module "blog_autoscaling" {
 }
 
 module "blog_alb" {
-<<<<<<< HEAD
   source  = "terraform-aws-modules/alb/aws"
   version = "~> 6.0"
-=======
-  source = "terraform-aws-modules/alb/aws"
->>>>>>> b7ac6f6 (adjust name of alb module)
 
   name = "${var.environment.name}-blog-alb"
 
